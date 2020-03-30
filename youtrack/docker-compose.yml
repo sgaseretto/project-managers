@@ -1,0 +1,26 @@
+version: '3'
+services: 
+  youtrack: 
+    image: jetbrains/youtrack:2019.3.65512
+    container_name: youtrack
+    restart: always
+    ports:
+      - 80:8080
+    volumes: 
+      # - ./data:/opt/youtrack/data
+      # - ./conf:/opt/youtrack/conf
+      # - ./logs:/opt/youtrack/logs
+      # - ./backups:/opt/youtrack/backups
+      - youtrack-data:/opt/youtrack/data
+      - youtrack-conf:/opt/youtrack/conf
+      - youtrack-logs:/opt/youtrack/logs
+      - youtrack-backups:/opt/youtrack/backups
+volumes: 
+  youtrack-data:
+    driver: local
+  youtrack-conf:
+    driver: local
+  youtrack-logs:
+    driver: local
+  youtrack-backups:
+      driver: local
