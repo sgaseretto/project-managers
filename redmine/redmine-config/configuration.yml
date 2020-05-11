@@ -1,0 +1,12 @@
+# https://stackoverflow.com/questions/43451467/send-mails-from-redmine-container
+production:
+  email_delivery:
+    delivery_method: :smtp
+    smtp_settings:
+      enable_starttls_auto: true
+      address: "smtp.gmail.com" 
+      port: '587'
+      domain: "smtp.gmail.com" 
+      authentication: :plain
+      user_name: "sender@gmail.com" 
+      password: "senderpassword"

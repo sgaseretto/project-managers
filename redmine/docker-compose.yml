@@ -23,6 +23,7 @@ services:
       - redmine-data:/usr/src/redmine/files
       - ./redmine-plugins:/usr/src/redmine/plugins
       - ./redmine-themes:/usr/src/redmine/public/themes
+      - ./redmine-config/configuration.yml:/usr/src/redmine/config/configuration.yml
     ports:
       - 80:3000
     environment:
